@@ -1,0 +1,48 @@
+.loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff5f9;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  
+  .heart-svg {
+    width: 160px;
+    height: auto;
+  }
+  
+  .heart-fill {
+    fill: url(#pinkGradient);
+    animation: fillUp 2s ease-in forwards;
+  }
+  
+  .glimmer {
+    fill: url(#glimmerGradient);
+    animation: shimmerMove 1s ease-out forwards;
+  }
+  
+  @keyframes fillUp {
+    from {
+      y: 100;
+    }
+    to {
+      y: 0;
+    }
+  }
+  
+  @keyframes shimmerMove {
+    0% {
+      x: -100;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.9;
+    }
+    100% {
+      x: 100;
+      opacity: 0;
+    }
+  }
+  

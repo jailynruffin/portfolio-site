@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -6,8 +7,19 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import LoadingScreen from "./components/LoadingScreen";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // You can skip this delay if needed
+    const timer = setTimeout(() => setLoading(false), 3500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <LoadingScreen onFinish={() => setLoading(false)} />;
+
   return (
     <div>
       <Navbar />
