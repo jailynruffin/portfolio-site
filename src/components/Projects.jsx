@@ -16,6 +16,12 @@ export default function Projects() {
       demo: null,
     },
     {
+      title: "Palette Generator",
+      description: "A pastel-themed color palette generator built with React with the ability to create palettes using color harmony modes.",
+      github: "https://github.com/jailynruffin/palette-gen",
+      demo: null, 
+    },
+    {
       title: "Portfolio Website",
       description: "This very site! Built with React, AOS animations, and custom styling — clean, personal, and modern.",
       github: "https://github.com/jailynruffin/portfolio-site",
