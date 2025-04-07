@@ -18,7 +18,7 @@ export default function Projects() {
     {
       title: "Portfolio Website",
       description: "This very site! Built with React, AOS animations, and custom styling — clean, personal, and modern.",
-      github: null,
+      github: "https://github.com/jailynruffin/portfolio-site",
       demo: "self",
     },
   ];
