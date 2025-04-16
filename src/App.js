@@ -13,7 +13,6 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // You can skip this delay if needed
     const timer = setTimeout(() => setLoading(false), 3500);
     return () => clearTimeout(timer);
   }, []);

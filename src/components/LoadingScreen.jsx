@@ -5,8 +5,8 @@ export default function LoadingScreen({ onFinish }) {
   const [showGlimmer, setShowGlimmer] = useState(false);
 
   useEffect(() => {
-    const fillTimer = setTimeout(() => setShowGlimmer(true), 2000); // glimmer after fill
-    const endTimer = setTimeout(() => onFinish(), 3200); // hide loader after shimmer
+    const fillTimer = setTimeout(() => setShowGlimmer(true), 2000);
+    const endTimer = setTimeout(() => onFinish(), 3200); 
 
     return () => {
       clearTimeout(fillTimer);

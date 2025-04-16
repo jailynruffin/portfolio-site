@@ -21,6 +21,14 @@ export default function Contact() {
           >
             LinkedIn
           </a>
+          <a
+            href="https://calendly.com/jailynmruffin"
+            target="_blank"
+            rel="noreferrer"
+            className="contact-button"
+          >
+            Calendly
+          </a>
         </div>
       </div>
     </section>
