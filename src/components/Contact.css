@@ -55,4 +55,11 @@
     background: hotpink;
     color: white;
   }
+  .contact-button .icon {
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .contact-button span {
+    vertical-align: middle;
+  }
   

@@ -4,7 +4,7 @@ import './Footer.css';
 export default function Footer() {
   return (
     <footer className="footer">
-      <p>Designed & developed by Jailyn Ruffin</p>
+      <p>© {new Date().getFullYear()} Designed & Developed by Jailyn Ruffin</p>
     </footer>
   );
 }

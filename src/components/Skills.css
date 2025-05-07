@@ -1,44 +1,77 @@
 .skills {
-    padding: 100px 20px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
+  padding: 100px 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.skill-section {
+  margin-bottom: 60px;
+}
+
+.glistening-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: hotpink;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.glistening-title::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: glisten 2s ease-in-out 1;
+}
+
+@keyframes glisten {
+  0% {
+    left: -75%;
   }
-  
-  .skills h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #222;
+  100% {
+    left: 125%;
   }
-  
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .skill-card {
-    background: #fdf1f6;
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(50, 24, 37, 0.5);
-    transition: transform 0.2s ease;
-  }
-  
-  .skill-card:hover {
-    transform: translateY(-4px);
-  }
-  
-  .skill-card .icon {
-    font-size: 1.8rem;
-    display: block;
-    margin-bottom: 8px;
-  }
-  
-  .skill-card p {
-    margin: 0;
-    font-weight: 500;
-    color: #555;
-  }
-  
+}
+
+.inline-skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.inline-skill-list li {
+  background: #fdf1f6;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 500;
+  color: #333;
+  font-size: 0.95rem;
+  box-shadow: 0 3px 8px rgba(255, 105, 180, 0.12);
+  transition: transform 0.2s ease;
+}
+
+.inline-skill-list li:hover {
+  transform: translateY(-2px);
+}

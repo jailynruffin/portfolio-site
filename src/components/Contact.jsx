@@ -1,4 +1,5 @@
 import React from 'react';
+import { Mail, Linkedin, Calendar } from 'lucide-react';
 import './Contact.css';
 
 export default function Contact() {
@@ -7,11 +8,12 @@ export default function Contact() {
       <div className="contact-container" data-aos="fade-up">
         <h2>Let’s Connect</h2>
         <p>
-          Whether you want to collaborate, ask questions, or just say hi — my inbox is always open.
+          Open to freelance projects, new opportunities, or simply connecting — feel free to reach out!
         </p>
         <div className="contact-links">
           <a href="mailto:jailynmruffin@gmail.com" className="contact-button">
-            Email Me
+            <Mail size={18} className="icon" />
+            <span>Email Me</span>
           </a>
           <a
             href="https://www.linkedin.com/in/jailynruffin"
@@ -19,7 +21,8 @@ export default function Contact() {
             rel="noreferrer"
             className="contact-button secondary"
           >
-            LinkedIn
+            <Linkedin size={18} className="icon" />
+            <span>LinkedIn</span>
           </a>
           <a
             href="https://calendly.com/jailynmruffin"
@@ -27,7 +30,8 @@ export default function Contact() {
             rel="noreferrer"
             className="contact-button"
           >
-            Calendly
+            <Calendar size={18} className="icon" />
+            <span>Calendly</span>
           </a>
         </div>
       </div>

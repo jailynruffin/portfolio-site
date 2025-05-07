@@ -9,25 +9,25 @@ export default function Projects() {
   const projects = [
     {
       title: "MotivateMe",
-      description: "A mobile app for journaling and tracking biometrics. Built using React Native, Firebase, and Expo. Created as a senior capstone project for a real-world client.",
+      description: "A mobile app for journaling and tracking biometric data, built in collaboration with the UNT Health Science Center in Fort Worth. Uses React Native for the frontend and a Spring Boot API deployed with Railway. Features include custom journaling, goal-setting, biometric input, and secure user authentication.",
       github: null,
       demo: "modal", 
     },
     {
       title: "The Quote App",
-      description: "A web app where users can share, save, and comment on inspirational quotes. Built with React + Firestore.",
+      description: "A mobile app for sharing and commenting on inspirational quotes. Built with React and Firestore, featuring real time updates, user authentication, and interactive quote threads.",
       github: "https://github.com/jailynruffin/quote-app-frontend",
       demo: null,
     },
     {
       title: "Palette Generator",
-      description: "A pastel-themed color palette generator built with React with the ability to create palettes using color harmony modes.",
+      description: "A color palette tool built with React that lets users generate and preview themes using harmony modes like complementary and triadic. Designed with a focus on soft UI and user friendly interaction.",
       github: "https://github.com/jailynruffin/palette-gen",
       demo: null, 
     },
     {
       title: "Portfolio Website",
-      description: "This very site! Built with React, AOS animations, and custom styling — clean, personal, and modern.",
+      description: "This site, built with React and AOS, showcases selected projects and skills with responsive layout, custom design elements, and soft, accessible animations.",
       github: "https://github.com/jailynruffin/portfolio-site",
       demo: "self",
     },
@@ -35,7 +35,7 @@ export default function Projects() {
 
   return (
     <section className="projects">
-      <h2 data-aos="fade-up">My Projects</h2>
+      <h2 data-aos="fade-up">Projects</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div className="project-card" key={index} data-aos="fade-up" data-aos-delay={index * 100}>
