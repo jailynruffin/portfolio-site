@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import LoadingScreen from "./components/LoadingScreen";
+import Navbar from '../components/layout/Navbar';
+import Hero from '../components/features/hero/Hero';
+import About from '../components/features/about/About';
+import Skills from '../components/features/skills/Skills';
+import Projects from '../components/features/projects/Projects';
+import Contact from '../components/features/contact/Contact';
+import Footer from '../components/layout/Footer';
+import LoadingScreen from "../components/features/loading/LoadingScreen";
 
 function App() {
   const [loading, setLoading] = useState(true);
