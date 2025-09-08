@@ -1,31 +1,23 @@
-# Jailyn’s Portfolio Website
+# Jailyn’s Portfolio Website  
 
-Welcome to my personal portfolio!  
-This site was designed and developed by me — built with 💖 using React and custom CSS for a modern, responsive feel.
+Welcome to my personal portfolio. This site was fully designed and developed by me, using React and custom CSS to deliver a modern, responsive, and professional experience.  
 
-## 🚀 Features
+## Features  
+- Smooth scroll navigation with section highlighting  
+- Custom hero section with polished interactive elements  
+- Subtle gradient backgrounds and clean UI styling  
+- Fully responsive design for mobile and desktop  
+- Project showcase with GitHub and demo links  
+- Contact section with quick access to email and LinkedIn  
+- Built for deployment with Vite or Create React App  
 
-- Smooth scroll navigation with active section highlighting
-- Custom hero section with animated buttons
-- Aesthetic gradient backgrounds and soft UI elements
-- Responsive layout for mobile & desktop
-- Project showcase with GitHub + demo links
-- Contact section with email & LinkedIn buttons
-- Fully deployable React app using Vite or Create React App
+## Tech Stack  
+- **Frontend:** React, custom CSS, AOS (Animate on Scroll)  
+- **Tooling & Version Control:** Git, GitHub  
+- **Build/Deploy:** Vite or CRA (depending on environment)  
 
-## 🛠️ Tech Stack
+## Contact  
+Recruiters, hiring managers, and collaborators are welcome to reach out. You can connect with me directly via email or on LinkedIn.  
 
-- React
-- CSS (custom styled, no frameworks!)
-- Git + GitHub
-- AOS (Animate on Scroll)
-- Vite or CRA (pick based on your setup)
-
-## 📬 Contact Me
-
-If you're a recruiter, hiring manager, or just want to say hi —
-feel free to email me or connect on LinkedIn.
-
-## 🖤 A note from me
-
-This site was built with intention, clarity, and a touch of personality — just like how I approach my code.
+## Note  
+This portfolio was built with attention to detail, clear design choices, and a focus on practical implementation. It reflects how I approach software engineering: thoughtful in planning, disciplined in execution, and committed to creating reliable, high quality solutions.  
