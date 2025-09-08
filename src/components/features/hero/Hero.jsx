@@ -1,48 +1,95 @@
-import React, { useEffect, useRef } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import './Hero.css';
-
+import React, { useEffect, useRef } from "react";
+import styles from "./Hero.module.css";
+import ApiConsoleWidget from "./ApiConsoleWidget";
 
 export default function Hero() {
-  const starContainerRef = useRef(null);
+  const heroRef = useRef(null);
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
 
-    const container = starContainerRef.current;
-    if (!container) return;
+    let ticking = false;
 
-    for (let i = 0; i < 60; i++) {
-      const star = document.createElement("div");
-      star.className = "star";
-      const size = Math.random() * 10 + 10;
-      star.style.width = `${size}px`;
-      star.style.height = `${size}px`;
-      star.style.left = `${Math.random() * 100}%`;
-      star.style.top = `${Math.random() * 100}%`;
-      star.style.animationDuration = `${5 + Math.random() * 10}s`;
-      star.style.backgroundColor = "hotpink"; // debug color
-      container.appendChild(star);
-    }
+    const update = () => {
+      const el = heroRef.current;
+      if (!el) return;
+
+      // Negative as you scroll down
+      const y = el.getBoundingClientRect().top;
+
+      // Tune these multipliers to taste
+      el.style.setProperty("--p1", `${y * -0.10}px`);
+      el.style.setProperty("--p2", `${y * -0.06}px`); 
+    };
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        update();
+        ticking = false;
+      });
+    };
+
+    update(); // run once on mount
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-
   return (
-    <section className="hero">
-      <div className="star-background" ref={starContainerRef}></div> 
-      <div className="hero-content">
-        <h1 data-aos="fade-up">Hi, I’m Jailyn</h1>
-        <h3 className="subtitle" data-aos="fade-up" data-aos-delay="100">
-           Frontend Developer · React · UI/UX · Full-Stack 
-        </h3>
-        <h2 data-aos="fade-up" data-aos-delay="200">
-        I craft modern, intuitive interfaces that feel as good as they look.
-        </h2>
+    <section
+      ref={heroRef}
+      className={`${styles.hero} full-bleed`}
+      aria-labelledby="home-title"
+    >
+      <div className={styles.grid}>
+        {/* LEFT: copy */}
+        <div className={styles.left}>
+          <p className={styles.kicker}>Jailyn Ruffin — Full-stack Engineer</p>
 
-        <div className="hero-buttons" data-aos="fade-up" data-aos-delay="400">
-          <a href="#projects" className="cta-button">See My Work →</a>
-          <a href="#contact" className="cta-button secondary">Let’s Connect</a>
+          <h1 id="home-title" className={styles.title}>
+            I design interfaces and build the APIs behind them.
+          </h1>
+
+          <p className={styles.sub}>
+            Clean UX, clear APIs, and reliable releases. React + TypeScript on the
+            front; Node/Postgres on the back.
+          </p>
+
+          <div className={styles.ctaRow}>
+            <a href="#work" className={styles.ctaPrimary}>View Work</a>
+            <a href="#contact" className={styles.ctaSecondary}>Contact</a>
+          </div>
+
+          <div className={styles.capRow}>
+            <div className={styles.capCard}>
+              <div className={styles.capTitle}>UI Engineering</div>
+              <ul className={styles.capList}>
+                <li>Design systems & accessibility</li>
+                <li>Complex state & forms</li>
+              </ul>
+            </div>
+            <div className={styles.capCard}>
+              <div className={styles.capTitle}>API & Data</div>
+              <ul className={styles.capList}>
+                <li>REST, auth, background jobs</li>
+                <li>Relational modeling (Postgres)</li>
+              </ul>
+            </div>
+            <div className={styles.capCard}>
+              <div className={styles.capTitle}>Quality & DX</div>
+              <ul className={styles.capList}>
+                <li>Testing & CI</li>
+                <li>Performance budgets</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* RIGHT: console */}
+        <div className={styles.right}>
+          <ApiConsoleWidget />
         </div>
       </div>
     </section>
