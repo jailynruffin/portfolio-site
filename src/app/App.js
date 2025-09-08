@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useMemo } from "react";
 import "../styles/variables.css";
 import "../styles/globals.css";
-import "../styles/animations.css";
 import "../styles/utilities.css";
 
 import AOS from "aos";
