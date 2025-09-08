@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./LoadingScreen.css";
+import '../../../styles/sections/LoadingScreen.css';
 
 export default function LoadingScreen({ onFinish }) {
   const [showGlimmer, setShowGlimmer] = useState(false);

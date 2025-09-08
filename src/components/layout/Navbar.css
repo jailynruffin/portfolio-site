@@ -1,0 +1,70 @@
+/* Full-width sticky bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav, 1000);
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  width: 100%;
+}
+
+/* 3 columns: left brand, centered tabs, right spacer */
+.navbar-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  height: var(--navbar-height, 64px);
+  padding-inline: 24px;
+}
+
+/* Brand pinned left */
+.brand {
+  justify-self: start;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: var(--text-900);
+}
+
+.tabs {
+  --tab-gap: 36px;
+
+  position: relative;
+  justify-self: center;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: var(--tab-gap);
+}
+
+.nav-spacer { justify-self: end; }
+
+/* Tab buttons */
+.tab-btn {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 6px 2px;
+  font: inherit;
+  color: var(--text-700);
+  cursor: pointer;
+  transition: color var(--dur-200, 200ms) var(--ease-out, ease);
+  outline-offset: 4px;
+}
+.tab-btn[aria-selected="true"] {
+  color: var(--text-900);
+  font-weight: 600;
+}
+
+.tab-underline {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: var(--underline-w, 48px);
+  transform: translateX(var(--underline-x, 0px));
+  background: var(--brand-600, #e64795);
+  border-radius: 2px;
+  transition: transform 200ms var(--ease-out, ease), width 200ms var(--ease-out, ease);
+}
